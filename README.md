@@ -1,20 +1,26 @@
-# Docker Compose Multi-Container Project
+# Docker Compose App with Nginx Reverse Proxy on EC2
 
-This project demonstrates a multi-container setup using Docker Compose.
+## Overview
+This project demonstrates deploying a multi-container application using Docker Compose and exposing it through an Nginx reverse proxy on AWS EC2.
 
 ## Technologies Used
-- Docker
-- Docker Compose
+- Docker & Docker Compose (v2)
 - Nginx
-- Redis
-- Linux (Ubuntu)
+- AWS EC2 (Ubuntu)
+- Linux
+- GitHub
 
-## Features
-- Web service container using Nginx
-- Redis service container
-- Docker volumes for live updates
-- Service dependency management
+## Architecture
+- Web service container (Nginx)
+- Redis container (internal)
+- Nginx reverse proxy on EC2
+
+## How It Works
+- Docker Compose manages multi-container setup
+- Nginx acts as a reverse proxy routing traffic to the web container
+- Application is deployed on AWS EC2
 
 ## How to Run
 ```bash
 docker compose up -d
+
